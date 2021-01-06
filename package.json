@@ -1,0 +1,53 @@
+{
+  "name": "persian-datepicker",
+  "version": "0.1.0",
+  "description": "Persian date picker components for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --inline --content-base ./examples",
+    "webpack": "webpack",
+    "babel": "babel src --out-dir lib --ignore /examples ",
+    "prepublish": "npm run babel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davoodhobabi/persian-datepicker"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "jalali",
+    "persian",
+    "datepicker"
+  ],
+  "author": "davood hobabi",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/davoodhobabi/persian-datepicker/issues"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/davoodhobabi/persian-datepicker#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.3",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-react": "^7.9.0",
+    "jalali-moment": "^3.3.9",
+    "prop-types": "^15.5.10",
+    "styled-components": "^5.2.1"
+  }
+}
