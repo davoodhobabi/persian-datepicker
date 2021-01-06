@@ -1,1 +1,1 @@
-# Persian DatePicker :calendar:
+# Persian React DatePicker :calendar:

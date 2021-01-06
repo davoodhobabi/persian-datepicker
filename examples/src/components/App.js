@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import DatePicker from '../../../src';
+import DatePicker from '../../../src/components/datePicker';
 
 import { Section } from './style';
 

@@ -1,6 +1,6 @@
 {
-  "name": "persian-datepicker",
-  "version": "0.1.0",
+  "name": "persian-react-datepicker",
+  "version": "0.1.1",
   "description": "Persian date picker components for React",
   "main": "lib/index.js",
   "scripts": {
@@ -39,13 +39,13 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^1.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "@babel/core": "^7.9.0",
-    "@babel/preset-react": "^7.9.0",
+    "@babel/preset-react": "^7.9.0"
+  },
+  "dependencies": {
     "jalali-moment": "^3.3.9",
     "prop-types": "^15.5.10",
     "styled-components": "^5.2.1"
