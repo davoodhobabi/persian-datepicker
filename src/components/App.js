@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <Section>
         <header>
-          persian datepicker
+          persian React datepicker
         </header>
         <main>
           <h1>
