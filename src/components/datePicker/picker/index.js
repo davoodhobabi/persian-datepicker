@@ -1,11 +1,13 @@
 //node modules
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { number } from "prop-types";
 import moment from "jalali-moment";
 //components
 import Section from "./section";
 
+
 //utils
+import { dateRengeValidation } from "./validation";
 //styles
 
 
@@ -26,18 +28,18 @@ const convertMonth = number =>{
   }
 };
 
-const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge={ end : moment().format("jYYYY") ,start :"1371" } }) => {
+const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge }) => {
 
+  const [yearRenge, setYearRenge] = useState({ end : moment().format("jYYYY") ,start :"1371" });
   const years = Array.from(
     {
-      length: (dateRenge.end * 1 - dateRenge.start * 1)+1,
+      length: (yearRenge.end * 1 - yearRenge.start * 1)+1,
     },
     (x, i) => ({
-      name: `${(dateRenge.start * 1) + i}`,
+      name: `${(yearRenge.start * 1) + i}`,
       index: `${i < 10 ? "0" : ""}${i + 1}`,
     })
   );
-
   const [date, setDate] = useState(value);
   const [values, setValues] = useState({
     day: {
@@ -52,8 +54,12 @@ const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge={ 
       (year) => year.name === moment(value, "jYYYY-jMM-jDD").format("jYYYY")
     ),
   });
-  useEffect(() => {
 
+  useEffect(() => {
+    dateRengeValidation(dateRenge , value=>setYearRenge(value))
+  }, [dateRenge]);
+
+  useEffect(() => {
     setDate(
       values.year.name + "-" + values.month.index + "-" + values.day.index
     );

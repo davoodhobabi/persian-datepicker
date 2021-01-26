@@ -77,7 +77,7 @@ export default class App extends Component {
           <div className="demo">
             <div>
               <DatePicker 
-                dateRenge={{start: "1385" , end:"1399"}}
+                dateRenge={{start: "1385" , end:"1395"}}
               />
             </div>
             <div>
