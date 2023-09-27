@@ -51,7 +51,7 @@ const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge })
       index: moment(value, "jYYYY-jMM-jDD").format("jMM"),
     },
     year: years.find(
-      (year) => year.name === moment(value, "jYYYY-jMM-jDD").format("jYYYY")
+      (year) => year?.name === moment(value, "jYYYY-jMM-jDD").format("jYYYY")
     ),
   });
 
@@ -61,7 +61,7 @@ const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge })
 
   useEffect(() => {
     setDate(
-      values.year.name + "-" + values.month.index + "-" + values.day.index
+      values.year?.name + "-" + values.month?.index + "-" + values.day?.index
     );
   }, [values]);
 
@@ -71,8 +71,8 @@ const Picker = ({ onChange, value=moment().format("jYYYY-jMM-jDD"), dateRenge })
       setValues({
         ...values,
         day: {
-          name: `${values.day.name - 1}`,
-          index: `${values.day.index - 1}`,
+          name: `${values.day?.name - 1}`,
+          index: `${values.day?.index - 1}`,
         },
       });
     }
